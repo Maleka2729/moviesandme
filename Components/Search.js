@@ -1,5 +1,4 @@
 // Création d'un dossier component, pour mettre tous nos components à l'intérieur
-
 // Création de la view "recherche" de notre application de gestion de film
 
 import React from 'react'
