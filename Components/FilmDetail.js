@@ -14,7 +14,7 @@ class FilmDetail extends React.Component {
     }
 
     componentDidMount() {
-        console.log('render')
+        console.log('componentDidMount')
         getFilmDetailFromApi(this.props.navigation.state.params.idFilm).then(data => {
             this.setState({
                 film: data,
