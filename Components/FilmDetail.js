@@ -23,34 +23,36 @@ class FilmDetail extends React.Component {
         })
     }
 
-    _displayFilm (){
-        const film = this.state.film
-        if (film != undefined) {
-            return (
-                <ScrollView style={styles.scrollview_container}>
-                    <Text> détail du film {film.title}</Text>
-                </ScrollView>
-            )
-        }
-    }
+    // _displayFilm (){
+    //     const film = this.state.film
+    //     if (film != undefined) {
+    //         return (
+    //             <ScrollView style={styles.scrollview_container}>
+    //                 <Text> détail du film {film.title}</Text>
+    //             </ScrollView>
+    //         )
+    //     }
+    // }
 
-    _displayLoading () {
-        if (this.state.isLoading) {
-            return (
-                <View style={styles.loading_container}>
-                    <ActivityIndicator size='large'/>
-                </View>
-            )
-        }
-    }
+    // _displayLoading () {
+    //     if (this.state.isLoading) {
+    //         return (
+    //             <View style={styles.loading_container}>
+    //                 <ActivityIndicator size='large'/>
+    //             </View>
+    //         )
+    //     }
+    // }
 
     render (){
         console.log('render')
         const idFilm = this.props.navigation.state.params.idFilm
+        const film = this.state.film
         return (
             <View style={styles.main_container}>
-                {this._displayFilm()}
-                {this._displayLoading()}
+                <Text> détail du film {film.original_title}</Text>
+                {/* {this._displayFilm()}
+                {this._displayLoading()} */}
             </View>
         )
     }
